@@ -1,0 +1,185 @@
+@charset "UTF-8";
+* {
+  box-sizing: border-box;
+}
+
+body {
+  display: block;
+  margin: auto;
+  background-image: url(./styles/src/GameWorldBackground.png);
+}
+
+#sitePresent .container-fluid .navbar {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+#sitePresent .container-fluid .navbar .navbar-brand .img-fluid {
+  height: auto;
+  max-width: 350px;
+  width: 100%;
+  max-height: 150px;
+}
+#sitePresent .container-fluid .navbar #btnBars {
+  display: none;
+  font-size: 1.4em;
+  border: transparent;
+  background: transparent;
+  transition: all 0.25ms ease;
+}
+#sitePresent .container-fluid .navbar #btnBars:hover {
+  color: darkred;
+  transform: rotate(180deg);
+}
+#sitePresent .container-fluid .navbar .navbar-nav {
+  display: flex;
+  flex-direction: row;
+  -moz-column-gap: 220px;
+       column-gap: 220px;
+  list-style-type: none;
+}
+#sitePresent .container-fluid .navbar .navbar-nav .nav-item .nav-link {
+  color: azure;
+  font-size: 1.6em;
+  -moz-column-gap: 40%;
+       column-gap: 40%;
+  text-decoration: none;
+  font-family: linkStart;
+}
+#sitePresent .container-fluid .navbar .navbar-nav .nav-item .nav-link:hover {
+  color: darkred;
+}
+#sitePresent .container-fluid .navbar .navbar-nav form {
+  margin-top: 10px;
+  margin-right: 10px;
+  display: flex;
+  flex-direction: row;
+}
+#sitePresent .container-fluid .navbar .navbar-nav form input {
+  height: 30px;
+  font-family: linkStart;
+}
+#sitePresent .container-fluid .navbar .navbar-nav form #btnSearch {
+  height: 30px;
+  color: azure;
+  background: transparent;
+}
+#sitePresent .container-fluid .navbar .navbar-nav form #btnSearch:hover {
+  color: darkred;
+  background-color: black;
+}
+#sitePresent .container-fluid #slideCarousel .carousel-inner .carousel-item .row {
+  display: flex;
+  flex-direction: row;
+}
+#sitePresent .container-fluid #slideCarousel .carousel-inner .carousel-item .row #affiche #firstPict {
+  margin-top: 8px;
+  padding: 10px;
+  max-width: 100%;
+  width: 100%;
+  height: auto;
+}
+#sitePresent .container-fluid #slideCarousel .carousel-inner .carousel-item .row .col-lg-5 .title {
+  cursor: pointer;
+  font-size: 1.8em;
+  color: azure;
+  letter-spacing: 10px;
+  font-family: eaSports;
+}
+#sitePresent .container-fluid #slideCarousel .carousel-inner .carousel-item .row .col-lg-5 .listBtn {
+  display: flex;
+  flex-direction: row;
+}
+#sitePresent .container-fluid #slideCarousel .carousel-inner .carousel-item .row .col-lg-5 .listBtn #btnImSim, #sitePresent .container-fluid #slideCarousel .carousel-inner .carousel-item .row .col-lg-5 .listBtn #btnRécits, #sitePresent .container-fluid #slideCarousel .carousel-inner .carousel-item .row .col-lg-5 .listBtn #btnFPS, #sitePresent .container-fluid #slideCarousel .carousel-inner .carousel-item .row .col-lg-5 .listBtn #btnOpenWorld, #sitePresent .container-fluid #slideCarousel .carousel-inner .carousel-item .row .col-lg-5 .listBtn #btnChoice, #sitePresent .container-fluid #slideCarousel .carousel-inner .carousel-item .row .col-lg-5 .listBtn #btnRPG, #sitePresent .container-fluid #slideCarousel .carousel-inner .carousel-item .row .col-lg-5 .listBtn #btnBaston, #sitePresent .container-fluid #slideCarousel .carousel-inner .carousel-item .row .col-lg-5 .listBtn #btnAdventure, #sitePresent .container-fluid #slideCarousel .carousel-inner .carousel-item .row .col-lg-5 .listBtn #btnJRPG, #sitePresent .container-fluid #slideCarousel .carousel-inner .carousel-item .row .col-lg-5 .listBtn #btnCards, #sitePresent .container-fluid #slideCarousel .carousel-inner .carousel-item .row .col-lg-5 .listBtn #btnEscape {
+  padding: 3px;
+  opacity: 1;
+  font-size: 1.1em;
+  cursor: pointer;
+  font-family: vipnagorgialla;
+  background-color: azure;
+  border: 1px solid black;
+}
+#sitePresent .container-fluid #slideCarousel .carousel-inner .carousel-item .row .col-lg-5 .listBtn #btnImSim:hover, #sitePresent .container-fluid #slideCarousel .carousel-inner .carousel-item .row .col-lg-5 .listBtn #btnRécits:hover, #sitePresent .container-fluid #slideCarousel .carousel-inner .carousel-item .row .col-lg-5 .listBtn #btnFPS:hover, #sitePresent .container-fluid #slideCarousel .carousel-inner .carousel-item .row .col-lg-5 .listBtn #btnOpenWorld:hover, #sitePresent .container-fluid #slideCarousel .carousel-inner .carousel-item .row .col-lg-5 .listBtn #btnChoice:hover, #sitePresent .container-fluid #slideCarousel .carousel-inner .carousel-item .row .col-lg-5 .listBtn #btnRPG:hover, #sitePresent .container-fluid #slideCarousel .carousel-inner .carousel-item .row .col-lg-5 .listBtn #btnBaston:hover, #sitePresent .container-fluid #slideCarousel .carousel-inner .carousel-item .row .col-lg-5 .listBtn #btnAdventure:hover, #sitePresent .container-fluid #slideCarousel .carousel-inner .carousel-item .row .col-lg-5 .listBtn #btnJRPG:hover, #sitePresent .container-fluid #slideCarousel .carousel-inner .carousel-item .row .col-lg-5 .listBtn #btnCards:hover, #sitePresent .container-fluid #slideCarousel .carousel-inner .carousel-item .row .col-lg-5 .listBtn #btnEscape:hover {
+  opacity: 0.6;
+}
+#sitePresent .container-fluid #slideCarousel .carousel-inner .carousel-item .row .col-lg-5 .describe {
+  margin: 20px auto;
+  letter-spacing: 2px;
+  line-height: 40px;
+  color: azure;
+  font-size: 1.4em;
+}
+#sitePresent .container-fluid #slideCarousel .carousel-inner .carousel-item .row .col-lg-5 .describe .listImg {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+#sitePresent .container-fluid #slideCarousel .carousel-inner .carousel-item .row .col-lg-5 .describe .listImg .pictGame {
+  margin-top: 5px;
+  padding: 3px 5px 3px 5px;
+  width: 100%;
+  opacity: 1;
+  cursor: pointer;
+  height: 150px;
+}
+#sitePresent .container-fluid #slideCarousel .carousel-inner .carousel-item .row .col-lg-5 .listDetails .row {
+  display: flex;
+  flex-direction: row;
+  margin-top: 20px;
+  text-align: center;
+}
+#sitePresent .container-fluid #slideCarousel .carousel-inner .carousel-item .row .col-lg-5 .listDetails .row .developper {
+  font-size: 1.3em;
+  font-family: closeness;
+  color: azure;
+}
+#sitePresent .container-fluid #slideCarousel .carousel-inner .carousel-item .row .col-lg-5 .listBtnBuy {
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
+}
+#sitePresent .container-fluid #slideCarousel .carousel-inner .carousel-item .row .col-lg-5 .listBtnBuy .btnAdd {
+  background-color: transparent;
+  font-size: 1.3em;
+  letter-spacing: 10px;
+}
+#sitePresent .container-fluid #slideCarousel .carousel-inner .carousel-item .row .col-lg-5 .listBtnBuy .btnAdd .fa-solid {
+  font-size: 1.4em;
+  color: azure;
+}
+#sitePresent .container-fluid #slideCarousel .carousel-inner .carousel-item .row .col-lg-5 .listBtnBuy .btnAdd .fa-solid:hover {
+  color: darkred;
+}
+#sitePresent .container-fluid #slideCarousel .carousel-inner .carousel-item .row .col-lg-5 .listBtnBuy .btnAdd:active {
+  opacity: 0.7;
+  transform: translateY(4px);
+}
+#sitePresent .container-fluid #slideCarousel .carousel-inner .carousel-item .row .col-lg-5 .listBtnBuy .price {
+  margin-left: 3px;
+  font-size: 1.4em;
+  font-family: eaSports;
+  color: azure;
+  background-color: transparent;
+}
+
+@font-face {
+  font-family: linkStart;
+  src: url(styles/fonts/LinkStart.otf);
+}
+@font-face {
+  font-family: pirulen;
+  src: url(styles/fonts/Pirulen.otf);
+}
+@font-face {
+  font-family: eaSports;
+  src: url(styles/fonts/EaSports.ttf);
+}
+@font-face {
+  font-family: vipnagorgialla;
+  src: url(styles/fonts/vipnagorgialla\ rg.otf);
+}
+@font-face {
+  font-family: closeness;
+  src: url(styles/fonts/Closeness.ttf);
+}/*# sourceMappingURL=gameWorld.css.map */

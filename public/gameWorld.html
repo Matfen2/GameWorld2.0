@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="gameWorld.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/2d33046217.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>    
+    <title>Game World</title>
+</head>
+<body>
+    <section id="sitePresent">
+        <div class="container-fluid">
+            <!-- NAV -->
+            <div class="navbar navbar-expand-lg">
+                <div class="navbar-brand"><a href="gameWorld.html"><img src="styles/src/GameWorldLogo.png" class="img-fluid"></a></div>
+                <button type="button" id="btnBars" data-bs-toggle="offcanvas" data-bs-target="#sidebarFluid"><i class="fas fa-bars"></i></button>
+                <div class="navbar-nav">
+                    <li class="nav-item"><a href="#" class="nav-link">Community</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">Bundle</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">Item</a></li>
+                    <form action="/search" method="post" class="searchGame">
+                        <label for="searchGame"></label>
+                        <input type="text" name="searchGame" placeholder="nom d'un jeu" required>
+                        <button type="submit" id="btnSearch"><i class="fa fa-search"></i></button>
+                    </form>
+                </div>
+            </div>
+
+            <!-- CAROUSEL-->
+            <div id="slideCarousel" class="carousel slide" data-bs-ride="carousel" data-interval="3000" data-paused="hover">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="row">
+                            <div class="col-lg-7" id="affiche">
+                                <img src="styles/src/gamesPresentation/bioshock/bioshockAffiche.jpg" class="img-fluid" alt="Bioshock" id="firstPict">
+                            </div>
+                            <div class="col-lg-5 mt-3 mb-2 p-3" style="border: 5px solid rgb(51, 48, 48); background-color: black; height: auto" >
+                                <p class="title">Bioshock</p>
+                                <div class="listBtn">
+                                    <button type="button" id="btnImSim">Immersive Sim</button>
+                                    <button type="button" id="btnRécits">Riche en récits</button>
+                                    <button type="button" id="btnFPS">FPS</button>
+                                </div>
+                                <div class="describe">
+                                   <span class="listImg">
+                                        <div class="col-lg-4 col-md-6 col-sm-12">
+                                            <img src="styles/src/gamesPresentation/bioshock/bioshockImgOne.jpeg" class="img-fluid pictGame">
+                                        </div>
+                                        <div class="col-lg-4 col-md-6 col-sm-12">
+                                            <img src="styles/src/gamesPresentation/bioshock/bioshockImgTwo.jpeg" class="img-fluid pictGame">
+                                        </div>
+                                        <div class="col-lg-4 col-md-6 col-sm-12">
+                                            <img src="styles/src/gamesPresentation/bioshock/bioshockImgThree.jpeg" class="img-fluid pictGame">
+                                        </div>
+                                        <div class="col-lg-4 col-md-6 col-sm-12">
+                                            <img src="styles/src/gamesPresentation/bioshock/bioshockImgFour.jpeg" class="img-fluid pictGame">
+                                        </div>
+                                        <div class="col-lg-4 col-md-6 col-sm-12">
+                                            <img src="styles/src/gamesPresentation/bioshock/bioshockImgFive.jpeg" class="img-fluid pictGame">
+                                        </div>
+                                        <div class="col-lg-4 col-md-6 col-sm-12">
+                                            <img src="styles/src/gamesPresentation/bioshock/bioshockImgSix.jpeg" class="img-fluid pictGame">
+                                        </div>
+                                    </span>
+                                </div>
+                                <div class="listDetails">
+                                    <div class="row">
+                                        <div class="col-lg-6 col-md-6 col-sm-6">
+                                            <p class="developper">Developpeur : Irrational Games</p>
+                                        </div>
+                                        <div class="col-lg-6 col-md-6 col-sm-6">
+                                            <p class="developper">Editeur : 2k Games</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="listBtnBuy">
+                                    <button type="button" class="btnAdd"><i class="fa-solid fa-cart-plus"></i></button>
+                                    <button type="button" class="price">19.99 €</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="row">
+                            <div class="col-lg-7" id="affiche">
+                            <img src="styles/src/gamesPresentation/theWitcher3/theWitcher3Affiche.jpeg" class="img-fluid" alt="The Witcher 3" id="firstPict">                       
+                            </div>
+                            <div class="col-lg-5 mt-3 mb-2 p-3" style="border: 5px solid rgb(51, 48, 48); background-color: black; height: auto" >
+                                <p class="title">The Witcher 3 : Wild Hunt</p>
+                                <div class="listBtn">
+                                    <button type="button" id="btnOpenWorld">Monde Ouvert</button>
+                                    <button type="button" id="btnRécits">Riche en récits</button>
+                                    <button type="button" id="btnChoice">Choix de dialogues</button>
+                                    <button type="button" id="btnRPG">RPG</button>
+                                </div>
+                                <div class="describe">
+                                   <span class="listImg">
+                                        <div class="col-lg-4 col-md-6 col-sm-12">
+                                            <img src="styles/src/gamesPresentation/theWitcher3/theWitcher3ImgOne.jpeg" class="img-fluid pictGame">
+                                        </div>
+                                        <div class="col-lg-4 col-md-6 col-sm-12">
+                                            <img src="styles/src/gamesPresentation/theWitcher3/theWitcher3ImgTwo.jpg" class="img-fluid pictGame">
+                                        </div>
+                                        <div class="col-lg-4 col-md-6 col-sm-12">
+                                            <img src="styles/src/gamesPresentation/theWitcher3/theWitcher3ImgThree.jpg" class="img-fluid pictGame">
+                                        </div>
+                                        <div class="col-lg-4 col-md-6 col-sm-12">
+                                            <img src="styles/src/gamesPresentation/theWitcher3/theWitcher3ImgFour.jpg" class="img-fluid pictGame">
+                                        </div>
+                                        <div class="col-lg-4 col-md-6 col-sm-12">
+                                            <img src="styles/src/gamesPresentation/theWitcher3/theWitcher3ImgFive.jpg" class="img-fluid pictGame">
+                                        </div>
+                                        <div class="col-lg-4 col-md-6 col-sm-12">
+                                            <img src="styles/src/gamesPresentation/theWitcher3/theWitcher3ImgSix.jpg" class="img-fluid pictGame">
+                                        </div>
+                                    </span>
+                                </div>
+                                <div class="listDetails">
+                                    <div class="row">
+                                        <div class="col-lg-6 col-md-6 col-sm-6">
+                                            <p class="developper">Developpeur : CD PROJEKT RED</p>
+                                        </div>
+                                        <div class="col-lg-6 col-md-6 col-sm-6">
+                                            <p class="developper">Editeur : CD PROJEKT RED</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="listBtnBuy">
+                                    <button type="button" class="btnAdd"><i class="fa-solid fa-cart-plus"></i></button>
+                                    <button type="button" class="price">19.99 €</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="row">
+                            <div class="col-lg-7" id="affiche">
+                                <img src="styles/src/gamesPresentation/prey(2017)/prey2017Affiche.jpg" class="img-fluid" alt="Prey (2017)" id="firstPict">
+                            </div>
+                            <div class="col-lg-5 mt-3 mb-2 p-3" style="border: 5px solid rgb(51, 48, 48); background-color: black; height: auto" >
+                                <p class="title">Prey (2017)</p>
+                                <div class="listBtn">
+                                    <button type="button" id="btnRécits">Riche en récits</button>
+                                    <button type="button" id="btnImSim">Immersive Sim</button>
+                                    <button type="button" id="btnFPS">FPS</button>
+                                </div>
+                                <div class="describe">
+                                   <span class="listImg">
+                                        <div class="col-lg-4 col-md-6 col-sm-12">
+                                            <img src="styles/src/gamesPresentation/prey(2017)/preyImgOne.jpeg" class="img-fluid pictGame">
+                                        </div>
+                                        <div class="col-lg-4 col-md-6 col-sm-12">
+                                            <img src="styles/src/gamesPresentation/prey(2017)/preyImgTwo.jpeg" class="img-fluid pictGame">
+                                        </div>
+                                        <div class="col-lg-4 col-md-6 col-sm-12">
+                                            <img src="styles/src/gamesPresentation/prey(2017)/preyImgThree.jpeg" class="img-fluid pictGame">
+                                        </div>
+                                        <div class="col-lg-4 col-md-6 col-sm-12">
+                                            <img src="styles/src/gamesPresentation/prey(2017)/preyImgFour.jpeg" class="img-fluid pictGame">
+                                        </div>
+                                        <div class="col-lg-4 col-md-6 col-sm-12">
+                                            <img src="styles/src/gamesPresentation/prey(2017)/preyImgFive.jpeg" class="img-fluid pictGame">
+                                        </div>
+                                        <div class="col-lg-4 col-md-6 col-sm-12">
+                                            <img src="styles/src/gamesPresentation/prey(2017)/preyImgSix.jpeg" class="img-fluid pictGame">
+                                        </div>
+                                    </span>
+                                </div>
+                                <div class="listDetails">
+                                    <div class="row">
+                                        <div class="col-lg-6 col-md-6 col-sm-6">
+                                            <p class="developper">Developpeur : Arkane Studios</p>
+                                        </div>
+                                        <div class="col-lg-6 col-md-6 col-sm-6">
+                                            <p class="developper">Editeur : Bethesda Softworks</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="listBtnBuy">
+                                    <button type="button" class="btnAdd"><i class="fa-solid fa-cart-plus"></i></button>
+                                    <button type="button" class="price">9.99 €</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="row">
+                            <div class="col-lg-7" id="affiche">
+                                <img src="styles/src/gamesPresentation/scarletNexus/scarletNexusAffiche.jpg" class="img-fluid" alt="Bioshock" id="firstPict">
+                            </div>
+                            <div class="col-lg-5 mt-3 mb-2 p-3" style="border: 5px solid rgb(51, 48, 48); background-color: black; height: auto" >
+                                <p class="title">Scarlet Nexus</p>
+                                <div class="listBtn">
+                                    <button type="button" id="btnJRPG">J-RPG</button>
+                                    <button type="button" id="btnRécits">Riche en récits</button>
+                                    <button type="button" id="btnAdventure">Action/Aventure</button>
+                                </div>
+                                <div class="describe">
+                                   <span class="listImg">
+                                        <div class="col-lg-4 col-md-6 col-sm-12">
+                                            <img src="styles/src/gamesPresentation/scarletNexus/scarletNexusImgOne.jpeg" class="img-fluid pictGame">
+                                        </div>
+                                        <div class="col-lg-4 col-md-6 col-sm-12">
+                                            <img src="styles/src/gamesPresentation/scarletNexus/scarletNexusImgTwo.jpeg" class="img-fluid pictGame">
+                                        </div>
+                                        <div class="col-lg-4 col-md-6 col-sm-12">
+                                            <img src="styles/src/gamesPresentation/scarletNexus/scarletNexusImgThree.jpeg" class="img-fluid pictGame">
+                                        </div>
+                                        <div class="col-lg-4 col-md-6 col-sm-12">
+                                            <img src="styles/src/gamesPresentation/scarletNexus/scarletNexusImgFour.jpg" class="img-fluid pictGame">
+                                        </div>
+                                        <div class="col-lg-4 col-md-6 col-sm-12">
+                                            <img src="styles/src/gamesPresentation/scarletNexus/scarletNexusImgFive.jpeg" class="img-fluid pictGame">
+                                        </div>
+                                        <div class="col-lg-4 col-md-6 col-sm-12">
+                                            <img src="styles/src/gamesPresentation/scarletNexus/scarletNexusImgSix.jpeg" class="img-fluid pictGame">
+                                        </div>
+                                    </span>
+                                </div>
+                                <div class="listDetails">
+                                    <div class="row">
+                                        <div class="col-lg-6 col-md-6 col-sm-6">
+                                            <p class="developper">Developpeur : BANDAI STUDIOS</p>
+                                        </div>
+                                        <div class="col-lg-6 col-md-6 col-sm-6">
+                                            <p class="developper">Editeur : BANDAI Entertainmant</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="listBtnBuy">
+                                    <button type="button" class="btnAdd"><i class="fa-solid fa-cart-plus"></i></button>
+                                    <button type="button" class="price">24.99 €</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="row">
+                            <div class="col-lg-7" id="affiche">
+                                <img src="styles/src/gamesPresentation/hifiRush/hifiRushAffiche.jpg" class="img-fluid" alt="Hi-fi Rush" id="firstPict">
+                            </div>
+                            <div class="col-lg-5 mt-3 mb-2 p-3" style="border: 5px solid rgb(51, 48, 48); background-color: black; height: auto" >
+                                <p class="title">Hi-fi Rush</p>
+                                <div class="listBtn">
+                                    <button type="button" id="btnBaston">Hack 'n' Slash</button>
+                                    <button type="button" id="btnRécits">Riche en récits</button>
+                                    <button type="button" id="btnAdventure">Action/Aventure</button>
+                                </div>
+                                <div class="describe">
+                                   <span class="listImg">
+                                        <div class="col-lg-4 col-md-6 col-sm-12">
+                                            <img src="styles/src/gamesPresentation/hifiRush/hifiRushImgOne.jpeg" class="img-fluid pictGame">
+                                        </div>
+                                        <div class="col-lg-4 col-md-6 col-sm-12">
+                                            <img src="styles/src/gamesPresentation/hifiRush/hifiRushImgTwo.jpeg" class="img-fluid pictGame">
+                                        </div>
+                                        <div class="col-lg-4 col-md-6 col-sm-12">
+                                            <img src="styles/src/gamesPresentation/hifiRush/hifiRushImgThree.jpeg" class="img-fluid pictGame">
+                                        </div>
+                                        <div class="col-lg-4 col-md-6 col-sm-12">
+                                            <img src="styles/src/gamesPresentation/hifiRush/hifiRushImgFour.jpeg" class="img-fluid pictGame">
+                                        </div>
+                                        <div class="col-lg-4 col-md-6 col-sm-12">
+                                            <img src="styles/src/gamesPresentation/hifiRush/hifiRushImgFive.jpeg" class="img-fluid pictGame">
+                                        </div>
+                                        <div class="col-lg-4 col-md-6 col-sm-12">
+                                            <img src="styles/src/gamesPresentation/hifiRush/hifiRushImgSix.jpeg" class="img-fluid pictGame">
+                                        </div>
+                                    </span>
+                                </div>
+                                <div class="listDetails">
+                                    <div class="row">
+                                        <div class="col-lg-6 col-md-6 col-sm-6">
+                                            <p class="developper">Developpeur : Tango Gameworks</p>
+                                        </div>
+                                        <div class="col-lg-6 col-md-6 col-sm-6">
+                                            <p class="developper">Editeur : Bethesda Softworks</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="listBtnBuy">
+                                    <button type="button" class="btnAdd"><i class="fa-solid fa-cart-plus"></i></button>
+                                    <button type="button" class="price">29.99 €</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="gameWorld.js"></script>
+</body>
+</html>
