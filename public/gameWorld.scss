@@ -5,6 +5,7 @@
 body {
     display: block;
     margin: auto;
+    background-size: cover;
     background-image: url(./styles/src/GameWorldBackground.png);
 }
 
@@ -176,6 +177,100 @@ $thirdColor: darkred;
                                     color: $firstColor;
                                     background-color: transparent;
                                 }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .typesGames {
+            .swiper {
+                .swiper-wrapper {
+                    .swiper-slide {
+                        .card {
+                            display: block;
+                            margin: 30px auto;
+                            width: 70%;
+                            border-radius: 40px;
+                            background-color: $thirdColor;
+                            border: 1px solid $secondColor;
+                            .card-head {
+                                position: relative;
+                                top: -10%;
+                                .types {
+                                    font-size: 1.8em;
+                                    margin-bottom: 20px;
+                                    font-family: vipnagorgialla;
+                                }
+                                @include flex (row);
+                                align-items: center;
+                                justify-content: space-between;
+                                .plusMinus {
+                                    margin-top: -20px;
+                                    @include flex (row);
+                                    #btnPlus {
+                                        font-size: 1.8em;
+                                        border: transparent;
+                                        background: transparent;
+                                    }
+                                    #btnMinus {
+                                        display: none;
+                                        font-size: 1.8em;
+                                        border: transparent;
+                                        background: transparent;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .swiper-pagination-bullet {
+                margin-top: 40px;
+                width: 20px;
+                height: 20px;
+                text-align: center;
+                line-height: 20px;
+                font-size: 12px;
+                color: #000;
+                opacity: 1;
+                background: rgba(0, 0, 0, 0.2);
+            }
+        }
+        .footer {
+            padding-bottom: 5px;
+            @include flex (row);
+            align-items: center;
+            justify-content: space-between;
+            .foot {
+                font-size: 2.0em;
+                font-family: eaSports;
+            }
+            .listSocial {
+                column-gap: 80px;
+                @include flex (row);
+                list-style-type: none;
+                .socialItem {
+                    .socialLink {
+                        .fa {
+                            font-size: 1.6em;
+                        }
+                        .fa-facebook {
+                            color: $firstColor;
+                            &:hover {
+                                color: rgb(12, 12, 99);
+                            }
+                        }
+                        .fa-twitter {
+                            color: $firstColor;
+                            &:hover {
+                                color: rgb(211, 214, 216);
+                            }
+                        }
+                        .fa-youtube {
+                            color: $firstColor;
+                            &:hover {
+                                color: rgb(173, 11, 11);
                             }
                         }
                     }
