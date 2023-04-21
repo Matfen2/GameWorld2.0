@@ -1,5 +1,6 @@
 const express = require('express');
 const path = require('path');
+const searchPage = require('./routes/search');
 const bodyParser = require('body-parser');
 const app = express ();
 
@@ -7,6 +8,8 @@ const port = process.env.PORT || 3000;
 
 app.use(express.static('public'));
 app.use(bodyParser.urlencoded({extended: true}));
+
+app.use('/search', searchPage);
 
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, '/views'));

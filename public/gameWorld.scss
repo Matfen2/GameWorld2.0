@@ -49,13 +49,13 @@ $thirdColor: darkred;
             }
             .navbar-nav {
                 @include flex (row);
-                column-gap: 220px;
                 list-style-type: none;
                 .nav-item {
+                    margin-right: 60px;
                     .nav-link {
+                        column-gap: 160px;
                         color: azure;
                         font-size: 1.6em;
-                        column-gap: 40%;
                         text-decoration: none;
                         font-family: linkStart;
                         &:hover {
@@ -68,6 +68,7 @@ $thirdColor: darkred;
                     margin-right: 10px;
                     @include flex (row);
                     input {
+                        font-size: 1.4em;
                         height: 30px;
                         font-family: linkStart;
                     }
@@ -257,20 +258,17 @@ $thirdColor: darkred;
                         }
                     }
                 }
-            }
-            .swiper-pagination-bullet {
-                margin-top: 850px;
-                width: 20px;
-                height: 20px;
-                text-align: center;
-                line-height: 20px;
-                font-size: 12px;
-                color: #000;
-                opacity: 1;
-                background: rgba(0, 0, 0, 0.2);
-                &:active {
+                .swiper-button-prev {
+                    font-size: 0.7em;
+                    font-weight: bold;
                     color: $firstColor;
-                    background-color: $thirdColor;
+                    margin-left: 200px;
+                }
+                .swiper-button-next {
+                    font-size: 0.7em;
+                    font-weight: bold;
+                    color: $firstColor;
+                    margin-right: 200px;
                 }
             }
         }
@@ -317,6 +315,67 @@ $thirdColor: darkred;
     }
 }
 
+#sidebarFluid {
+    height: 250px;
+    border: 2px solid $firstColor;
+    background-color: $secondColor;
+    #btnCloseCanvas {
+        position: absolute;
+        top: 3%;
+        right: 2%;
+        font-size: 1.4em;
+        color: $thirdColor;
+        border: transparent;
+        background: transparent;
+        
+    }
+    .offcanvas-body {
+        @include flex (row);
+        align-items: center;
+        justify-content: space-between;
+        .img-fluid {
+            max-width: 350px;
+            height: 150px;
+        }
+        .canvasList {
+            @include flex (row);
+            list-style-type: none;
+            .canvas-item {
+                margin-right: 60px;
+                .canvas-link {
+                    column-gap: 160px;
+                    color: azure;
+                    font-size: 1.6em;
+                    text-decoration: none;
+                    font-family: linkStart;
+                    &:hover {
+                        color: $thirdColor;
+                    }
+                }
+            }
+            form {
+                    margin-top: 10px;
+                    margin-right: 10px;
+                    @include flex (row);
+                    input {
+                        font-size: 1.4em;
+                        height: 30px;
+                        font-family: linkStart;
+                    }
+                    #btnSearch {
+                        height: 30px;
+                        color: $firstColor;
+                        background: transparent;
+                        &:hover {
+                            color: $thirdColor;
+                            background-color: $secondColor;
+                        }
+                    }
+                }
+        }
+    }
+}
+
 // FONTS
 @font-face {
   font-family: linkStart;
@@ -343,3 +402,34 @@ $thirdColor: darkred;
   src: url(styles/fonts/Closeness.ttf);
 }
 
+
+@media screen and (max-width: 940px) {
+    #sitePresent {
+        .container-fluid {
+            .navbar {
+                #btnBars {
+                    display: block;
+                }
+                .navbar-nav {
+                    display: none;
+                }
+            }
+        }
+    }
+
+    #sidebarFluid {
+        .offcanvas-body {
+            @include flex (column);
+        }
+    }
+}
+
+@media screen and (max-width: 675px) {
+    #sidebarFluid {
+        .offcanvas-body {
+            .canvasList {
+                @include flex (column);
+            }
+        }
+    }
+}

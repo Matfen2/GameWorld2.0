@@ -22,12 +22,8 @@ $(".swiper-slide").each((index, slide) => {
 });
 
 $(".swiper-slide").each((index, slide) => {
-  $(slide)
-    .find(".card")
-    .each((index, card) => {
-      $(card)
-        .find(".btnMinus")
-        .each((index, btnMinus) => {
+  $(slide).find(".card").each((index, card) => {
+      $(card).find(".btnMinus").each((index, btnMinus) => {
           $(btnMinus).click(() => {
             $(card).find(".btnPlus").css("display", "block");
             $(card).find(".btnMinus").css("display", "none");
@@ -36,3 +32,18 @@ $(".swiper-slide").each((index, slide) => {
         });
     });
 });
+
+$(document).ready(function () {
+  $(".carousel-item").each(function () {
+    $(this)
+      .find(".pictGame")
+      .click(function () {
+        var newSrc = $(this).attr("src");
+        $(this)
+          .closest(".carousel-item")
+          .find("#firstPict")
+          .attr("src", newSrc);
+      });
+  });
+});
+

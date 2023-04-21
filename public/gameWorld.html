@@ -307,23 +307,23 @@
                                 <div class="card-body">
                                     <div class="listGames">
                                         <div class="row">
-                                            <div class="col-lg-2 games">
-                                                <img src="./styles/src/typesGames/rpg/Skyrim.jpeg" class="img-fluid w-100" height="200px" alt="Skyrim">
+                                            <div class="col-lg-2 col-md-4 col-sm-4 games">
+                                                <img src="./styles/src/typesGames/rpg/Skyrim.jpeg" class="img-fluid w-100 m-2" height="200px" alt="Skyrim">
                                             </div>
-                                            <div class="col-lg-2 games">
-                                                <img src="./styles/src/typesGames/rpg/fallout3.jpg" class="img-fluid w-100" height="200px" alt="Fallout 3">
+                                            <div class="col-lg-2 col-md-4 col-sm-4 games">
+                                                <img src="./styles/src/typesGames/rpg/fallout3.jpg" class="img-fluid w-100 m-2" height="200px" alt="Fallout 3">
                                             </div>
-                                            <div class="col-lg-2 games">
-                                                <img src="./styles/src/typesGames/rpg/falloutNewVegas.jpg" class="img-fluid w-100" height="200px" alt="Fallout New Vegas">
+                                            <div class="col-lg-2 col-md-4 col-sm-4 games">
+                                                <img src="./styles/src/typesGames/rpg/falloutNewVegas.jpg" class="img-fluid w-100 m-2" height="200px" alt="Fallout New Vegas">
                                             </div>
-                                            <div class="col-lg-2 games">
-                                                <img src="./styles/src/typesGames/rpg/starfield.jpg" class="img-fluid w-100" height="200px" alt="Starfield">
+                                            <div class="col-lg-2 col-md-4 col-sm-4 games">
+                                                <img src="./styles/src/typesGames/rpg/starfield.jpg" class="img-fluid w-100 m-2" height="200px" alt="Starfield">
                                             </div>
-                                            <div class="col-lg-2 games">
-                                                <img src="./styles//src/typesGames/rpg/theOuterWorlds.jpg" class="img-fluid w-100" height="200px" alt="The Outer World">
+                                            <div class="col-lg-2 col-md-4 col-sm-4 games">
+                                                <img src="./styles//src/typesGames/rpg/theOuterWorlds.jpg" class="img-fluid w-100 m-2" height="200px" alt="The Outer World">
                                             </div>
-                                            <div class="col-lg-2 games">
-                                                <img src="./styles/src/typesGames/rpg/dragonAgeOrigins.jpg" class="img-fluid w-100" height="200px" alt="Dragon Age Origins">
+                                            <div class="col-lg-2 col-md-4 col-sm-4 games">
+                                                <img src="./styles/src/typesGames/rpg/dragonAgeOrigins.jpg" class="img-fluid w-100 m-2" height="200px" alt="Dragon Age Origins">
                                             </div>
                                         </div>
                                     </div>
@@ -451,6 +451,26 @@
             </div>
         </div>
     </section>
+
+    <!-- OFFCANVAS -->
+    <div class="offcanvas offcanvas-top" id="sidebarFluid" tabindex="-1">
+            <button type="button" id="btnCloseCanvas" data-bs-dismiss="offcanvas"><i class="fas fa-times"></i></button>
+        <div class="offcanvas-body">
+            <a href="gameWorld.html"><img src="styles/src/GameWorldLogo.png" class="img-fluid w-100"></a>
+            <div class="canvasList">
+                <ul>
+                    <li class="canvas-item"><a href="#" class="canvas-link">Community</a></li>
+                    <li class="canvas-item"><a href="#" class="canvas-link">Bundle</a></li>
+                    <li class="canvas-item"><a href="#" class="canvas-link">Item</a></li>
+                </ul>
+                <form action="/search" method="post" class="searchGame">
+                    <label for="searchGame"></label>
+                    <input type="text" name="searchGame" placeholder="nom d'un jeu" required>
+                    <button type="submit" id="btnSearch"><i class="fa fa-search"></i></button>
+                </form>
+            </div>
+        </div>
+    </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>

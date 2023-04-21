@@ -37,15 +37,16 @@ body {
 #sitePresent .container-fluid .navbar .navbar-nav {
   display: flex;
   flex-direction: row;
-  -moz-column-gap: 220px;
-       column-gap: 220px;
   list-style-type: none;
 }
+#sitePresent .container-fluid .navbar .navbar-nav .nav-item {
+  margin-right: 60px;
+}
 #sitePresent .container-fluid .navbar .navbar-nav .nav-item .nav-link {
+  -moz-column-gap: 160px;
+       column-gap: 160px;
   color: azure;
   font-size: 1.6em;
-  -moz-column-gap: 40%;
-       column-gap: 40%;
   text-decoration: none;
   font-family: linkStart;
 }
@@ -59,6 +60,7 @@ body {
   flex-direction: row;
 }
 #sitePresent .container-fluid .navbar .navbar-nav form input {
+  font-size: 1.4em;
   height: 30px;
   font-family: linkStart;
 }
@@ -226,20 +228,17 @@ body {
 #sitePresent .container-fluid .typesGames .swiper .swiper-wrapper .swiper-slide .card .card-body .listGames .row .games .img-fluid:hover {
   transform: scale(1.4);
 }
-#sitePresent .container-fluid .typesGames .swiper-pagination-bullet {
-  margin-top: 850px;
-  width: 20px;
-  height: 20px;
-  text-align: center;
-  line-height: 20px;
-  font-size: 12px;
-  color: #000;
-  opacity: 1;
-  background: rgba(0, 0, 0, 0.2);
-}
-#sitePresent .container-fluid .typesGames .swiper-pagination-bullet:active {
+#sitePresent .container-fluid .typesGames .swiper .swiper-button-prev {
+  font-size: 0.7em;
+  font-weight: bold;
   color: azure;
-  background-color: darkred;
+  margin-left: 200px;
+}
+#sitePresent .container-fluid .typesGames .swiper .swiper-button-next {
+  font-size: 0.7em;
+  font-weight: bold;
+  color: azure;
+  margin-right: 200px;
 }
 #sitePresent .container-fluid .footer {
   padding-bottom: 5px;
@@ -281,6 +280,70 @@ body {
   color: rgb(173, 11, 11);
 }
 
+#sidebarFluid {
+  height: 250px;
+  border: 2px solid azure;
+  background-color: black;
+}
+#sidebarFluid #btnCloseCanvas {
+  position: absolute;
+  top: 3%;
+  right: 2%;
+  font-size: 1.4em;
+  color: darkred;
+  border: transparent;
+  background: transparent;
+}
+#sidebarFluid .offcanvas-body {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+#sidebarFluid .offcanvas-body .img-fluid {
+  max-width: 350px;
+  height: 150px;
+}
+#sidebarFluid .offcanvas-body .canvasList {
+  display: flex;
+  flex-direction: row;
+  list-style-type: none;
+}
+#sidebarFluid .offcanvas-body .canvasList .canvas-item {
+  margin-right: 60px;
+}
+#sidebarFluid .offcanvas-body .canvasList .canvas-item .canvas-link {
+  -moz-column-gap: 160px;
+       column-gap: 160px;
+  color: azure;
+  font-size: 1.6em;
+  text-decoration: none;
+  font-family: linkStart;
+}
+#sidebarFluid .offcanvas-body .canvasList .canvas-item .canvas-link:hover {
+  color: darkred;
+}
+#sidebarFluid .offcanvas-body .canvasList form {
+  margin-top: 10px;
+  margin-right: 10px;
+  display: flex;
+  flex-direction: row;
+}
+#sidebarFluid .offcanvas-body .canvasList form input {
+  font-size: 1.4em;
+  height: 30px;
+  font-family: linkStart;
+}
+#sidebarFluid .offcanvas-body .canvasList form #btnSearch {
+  height: 30px;
+  color: azure;
+  background: transparent;
+}
+#sidebarFluid .offcanvas-body .canvasList form #btnSearch:hover {
+  color: darkred;
+  background-color: black;
+}
+
 @font-face {
   font-family: linkStart;
   src: url(styles/fonts/LinkStart.otf);
@@ -300,4 +363,22 @@ body {
 @font-face {
   font-family: closeness;
   src: url(styles/fonts/Closeness.ttf);
+}
+@media screen and (max-width: 940px) {
+  #sitePresent .container-fluid .navbar #btnBars {
+    display: block;
+  }
+  #sitePresent .container-fluid .navbar .navbar-nav {
+    display: none;
+  }
+  #sidebarFluid .offcanvas-body {
+    display: flex;
+    flex-direction: column;
+  }
+}
+@media screen and (max-width: 675px) {
+  #sidebarFluid .offcanvas-body .canvasList {
+    display: flex;
+    flex-direction: column;
+  }
 }/*# sourceMappingURL=gameWorld.css.map */
