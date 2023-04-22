@@ -6,7 +6,9 @@ body {
     display: block;
     margin: auto;
     height: auto;
-    background-size: auto;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     background-image: url(./styles/src/GameWorldBackground.png);
 }
 
@@ -38,7 +40,8 @@ $thirdColor: darkred;
             }
             #btnBars {
                 display: none;
-                font-size: 1.4em;
+                font-size: 1.8em;
+                margin-right: 10px;
                 border: transparent;
                 background: transparent;
                 transition: all 0.25ms ease;
@@ -96,7 +99,7 @@ $thirdColor: darkred;
                             padding: 10px;
                             max-width: 100%;
                             width: 100%;
-                            height: auto;
+                            height: 620px;
                             }
                         }
                         .col-lg-5 {
@@ -185,6 +188,50 @@ $thirdColor: darkred;
                 }
             }
         }
+
+        // RESULTS ('result.ejs')
+        .result {
+            display: block;
+            margin: auto;
+            p {
+                font-size: 2.4em;
+                color: $firstColor;
+                text-align: center;
+                font-family: linkStart;
+            }
+            .row {
+                .col-lg-4 {
+                    .card {
+                        border: 3px solid $firstColor;
+                        background-color: $secondColor;
+                        .card-head {
+                            .img-fluid {
+                                height: 275px;
+                            }
+                        }
+                        .card-body {
+                            text-align: center;
+                            background-color: rgb(8, 8, 192);
+                            #btnInfo {
+                                border: transparent;
+                                background: transparent;
+                                a {
+                                    font-size: 1.2em;
+                                    color: $firstColor;
+                                    font-family: pirulen;
+                                    text-decoration: none;
+                                    &:hover {
+                                        color: $thirdColor;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        // TYPES GAMES
         .typesGames {
             .swiper {
                 .swiper-wrapper {
@@ -212,7 +259,6 @@ $thirdColor: darkred;
                                 background-color: rgb(11, 149, 190);
                             }
                             .card-head {
-                                
                                 margin-top: 15px;
                                 .types {
                                     font-size: 1.8em;
@@ -246,6 +292,8 @@ $thirdColor: darkred;
                                         .games {
                                             .img-fluid {
                                                 cursor: pointer;
+                                                border: 0px solid black;
+                                                border-radius: 40px;
                                                 transition: all 0.25ms ease;
                                                 &:hover {
                                                     transform: scale(1.4);
@@ -262,16 +310,22 @@ $thirdColor: darkred;
                     font-size: 0.7em;
                     font-weight: bold;
                     color: $firstColor;
-                    margin-left: 200px;
+                    position: absolute;
+                    top: 50%;
+                    left: 12%;
                 }
                 .swiper-button-next {
                     font-size: 0.7em;
                     font-weight: bold;
                     color: $firstColor;
-                    margin-right: 200px;
+                    position: absolute;
+                    top: 50%;
+                    right: 12%;
                 }
             }
         }
+
+        // FOOTER
         .footer {
             padding-bottom: 5px;
             @include flex (row);
@@ -279,6 +333,7 @@ $thirdColor: darkred;
             justify-content: space-between;
             .foot {
                 font-size: 2.0em;
+                color: $firstColor;
                 font-family: eaSports;
             }
             .listSocial {
@@ -315,6 +370,7 @@ $thirdColor: darkred;
     }
 }
 
+// OFFCANVAS
 #sidebarFluid {
     height: 250px;
     border: 2px solid $firstColor;
@@ -340,16 +396,22 @@ $thirdColor: darkred;
         .canvasList {
             @include flex (row);
             list-style-type: none;
-            .canvas-item {
-                margin-right: 60px;
-                .canvas-link {
-                    column-gap: 160px;
-                    color: azure;
-                    font-size: 1.6em;
-                    text-decoration: none;
-                    font-family: linkStart;
-                    &:hover {
-                        color: $thirdColor;
+            ul {
+                @include flex (row);
+                margin-top: 7px;
+                text-decoration: none;
+                list-style-type: none;
+                    .canvas-item {
+                    margin-right: 60px;
+                    .canvas-link {
+                        column-gap: 160px;
+                        color: azure;
+                        font-size: 1.6em;
+                        text-decoration: none;
+                        font-family: linkStart;
+                        &:hover {
+                            color: $thirdColor;
+                        }
                     }
                 }
             }
@@ -402,8 +464,70 @@ $thirdColor: darkred;
   src: url(styles/fonts/Closeness.ttf);
 }
 
+@media screen and (max-width: 992px) {
+  #sitePresent {
+    .container-fluid {
+        #slideCarousel {
+            .carousel-inner {
+                .carousel-item {
+                    .row {
+                        .col-lg-5 {
+                            .title {
+                                text-align: center;
+                            }
+                            .listBtn {
+                                justify-content: center;
+                            }
+                            .describe {
+                                .listImg {
+                                    .col-lg-4 {
+                                        .img-fluid {
+                                            height: 350px;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+  }
+}
 
-@media screen and (max-width: 940px) {
+
+@media screen and (max-width: 978px) {
+     #sitePresent {
+        .container-fluid {
+            .typesGames {
+                .swiper {
+                    .swiper-wrapper {
+                        .swiper-slide {
+                            .card {
+                                .card-body {
+                                    .listGames {
+                                        .row {
+                                            .games {
+                                                .img-fluid {
+                                                    margin: 5px;
+                                                    height: 350px;
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+@media screen and (max-width: 954px) {
     #sitePresent {
         .container-fluid {
             .navbar {
@@ -424,12 +548,78 @@ $thirdColor: darkred;
     }
 }
 
-@media screen and (max-width: 675px) {
-    #sidebarFluid {
-        .offcanvas-body {
-            .canvasList {
-                @include flex (column);
+@media screen and (max-width: 862px) {
+    #sitePresent {
+        .container-fluid {
+            .typesGames {
+                .swiper {
+                    .swiper-wrapper {
+                        .swiper-slide {
+                            .card {
+                                .card-body {
+                                    .listGames {
+                                        .row {
+                                            .games {
+                                                .img-fluid {
+                                                    margin: 5px;
+                                                    height: 350px;
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    .swiper-button-next {
+                        position: absolute;
+                        top: 50%;
+                        right: 10%;
+                    }
+                    .swiper-button-prev {
+                        position: absolute;
+                        top: 50%;
+                        left: 10%;
+                    }
+                }
             }
         }
     }
 }
+
+@media screen and (max-width: 675px) {
+    #sidebarFluid {
+        height: 275px;
+        .offcanvas-body {
+            .canvasList {
+                @include flex (column);
+                form {
+                    display: block;
+                    margin: auto;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 490px) {
+    #sitePresent {
+        .container-fluid {
+            .typesGames {
+                .swiper {
+                    .swiper-button-next {
+                        position: absolute;
+                        top: 40%;
+                        right: 8%;
+                    }
+                    .swiper-button-prev {
+                        position: absolute;
+                        top: 40%;
+                        left: 8%;
+                    }
+                }
+            }
+        }
+    }
+}
+

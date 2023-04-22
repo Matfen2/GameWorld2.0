@@ -7,7 +7,9 @@ body {
   display: block;
   margin: auto;
   height: auto;
-  background-size: auto;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   background-image: url(./styles/src/GameWorldBackground.png);
 }
 
@@ -25,7 +27,8 @@ body {
 }
 #sitePresent .container-fluid .navbar #btnBars {
   display: none;
-  font-size: 1.4em;
+  font-size: 1.8em;
+  margin-right: 10px;
   border: transparent;
   background: transparent;
   transition: all 0.25ms ease;
@@ -82,7 +85,7 @@ body {
   padding: 10px;
   max-width: 100%;
   width: 100%;
-  height: auto;
+  height: 620px;
 }
 #sitePresent .container-fluid #slideCarousel .carousel-inner .carousel-item .row .col-lg-5 .title {
   cursor: pointer;
@@ -166,6 +169,40 @@ body {
   color: azure;
   background-color: transparent;
 }
+#sitePresent .container-fluid .result {
+  display: block;
+  margin: auto;
+}
+#sitePresent .container-fluid .result p {
+  font-size: 2.4em;
+  color: azure;
+  text-align: center;
+  font-family: linkStart;
+}
+#sitePresent .container-fluid .result .row .col-lg-4 .card {
+  border: 3px solid azure;
+  background-color: black;
+}
+#sitePresent .container-fluid .result .row .col-lg-4 .card .card-head .img-fluid {
+  height: 275px;
+}
+#sitePresent .container-fluid .result .row .col-lg-4 .card .card-body {
+  text-align: center;
+  background-color: rgb(8, 8, 192);
+}
+#sitePresent .container-fluid .result .row .col-lg-4 .card .card-body #btnInfo {
+  border: transparent;
+  background: transparent;
+}
+#sitePresent .container-fluid .result .row .col-lg-4 .card .card-body #btnInfo a {
+  font-size: 1.2em;
+  color: azure;
+  font-family: pirulen;
+  text-decoration: none;
+}
+#sitePresent .container-fluid .result .row .col-lg-4 .card .card-body #btnInfo a:hover {
+  color: darkred;
+}
 #sitePresent .container-fluid .typesGames .swiper .swiper-wrapper .swiper-slide .card {
   display: block;
   margin: 30px auto;
@@ -223,6 +260,8 @@ body {
 }
 #sitePresent .container-fluid .typesGames .swiper .swiper-wrapper .swiper-slide .card .card-body .listGames .row .games .img-fluid {
   cursor: pointer;
+  border: 0px solid black;
+  border-radius: 40px;
   transition: all 0.25ms ease;
 }
 #sitePresent .container-fluid .typesGames .swiper .swiper-wrapper .swiper-slide .card .card-body .listGames .row .games .img-fluid:hover {
@@ -232,13 +271,17 @@ body {
   font-size: 0.7em;
   font-weight: bold;
   color: azure;
-  margin-left: 200px;
+  position: absolute;
+  top: 50%;
+  left: 12%;
 }
 #sitePresent .container-fluid .typesGames .swiper .swiper-button-next {
   font-size: 0.7em;
   font-weight: bold;
   color: azure;
-  margin-right: 200px;
+  position: absolute;
+  top: 50%;
+  right: 12%;
 }
 #sitePresent .container-fluid .footer {
   padding-bottom: 5px;
@@ -249,6 +292,7 @@ body {
 }
 #sitePresent .container-fluid .footer .foot {
   font-size: 2em;
+  color: azure;
   font-family: eaSports;
 }
 #sitePresent .container-fluid .footer .listSocial {
@@ -309,10 +353,17 @@ body {
   flex-direction: row;
   list-style-type: none;
 }
-#sidebarFluid .offcanvas-body .canvasList .canvas-item {
+#sidebarFluid .offcanvas-body .canvasList ul {
+  display: flex;
+  flex-direction: row;
+  margin-top: 7px;
+  text-decoration: none;
+  list-style-type: none;
+}
+#sidebarFluid .offcanvas-body .canvasList ul .canvas-item {
   margin-right: 60px;
 }
-#sidebarFluid .offcanvas-body .canvasList .canvas-item .canvas-link {
+#sidebarFluid .offcanvas-body .canvasList ul .canvas-item .canvas-link {
   -moz-column-gap: 160px;
        column-gap: 160px;
   color: azure;
@@ -320,7 +371,7 @@ body {
   text-decoration: none;
   font-family: linkStart;
 }
-#sidebarFluid .offcanvas-body .canvasList .canvas-item .canvas-link:hover {
+#sidebarFluid .offcanvas-body .canvasList ul .canvas-item .canvas-link:hover {
   color: darkred;
 }
 #sidebarFluid .offcanvas-body .canvasList form {
@@ -364,7 +415,24 @@ body {
   font-family: closeness;
   src: url(styles/fonts/Closeness.ttf);
 }
-@media screen and (max-width: 940px) {
+@media screen and (max-width: 992px) {
+  #sitePresent .container-fluid #slideCarousel .carousel-inner .carousel-item .row .col-lg-5 .title {
+    text-align: center;
+  }
+  #sitePresent .container-fluid #slideCarousel .carousel-inner .carousel-item .row .col-lg-5 .listBtn {
+    justify-content: center;
+  }
+  #sitePresent .container-fluid #slideCarousel .carousel-inner .carousel-item .row .col-lg-5 .describe .listImg .col-lg-4 .img-fluid {
+    height: 350px;
+  }
+}
+@media screen and (max-width: 978px) {
+  #sitePresent .container-fluid .typesGames .swiper .swiper-wrapper .swiper-slide .card .card-body .listGames .row .games .img-fluid {
+    margin: 5px;
+    height: 350px;
+  }
+}
+@media screen and (max-width: 954px) {
   #sitePresent .container-fluid .navbar #btnBars {
     display: block;
   }
@@ -376,9 +444,44 @@ body {
     flex-direction: column;
   }
 }
+@media screen and (max-width: 862px) {
+  #sitePresent .container-fluid .typesGames .swiper .swiper-wrapper .swiper-slide .card .card-body .listGames .row .games .img-fluid {
+    margin: 5px;
+    height: 350px;
+  }
+  #sitePresent .container-fluid .typesGames .swiper .swiper-button-next {
+    position: absolute;
+    top: 50%;
+    right: 10%;
+  }
+  #sitePresent .container-fluid .typesGames .swiper .swiper-button-prev {
+    position: absolute;
+    top: 50%;
+    left: 10%;
+  }
+}
 @media screen and (max-width: 675px) {
+  #sidebarFluid {
+    height: 275px;
+  }
   #sidebarFluid .offcanvas-body .canvasList {
     display: flex;
     flex-direction: column;
+  }
+  #sidebarFluid .offcanvas-body .canvasList form {
+    display: block;
+    margin: auto;
+  }
+}
+@media screen and (max-width: 490px) {
+  #sitePresent .container-fluid .typesGames .swiper .swiper-button-next {
+    position: absolute;
+    top: 40%;
+    right: 8%;
+  }
+  #sitePresent .container-fluid .typesGames .swiper .swiper-button-prev {
+    position: absolute;
+    top: 40%;
+    left: 8%;
   }
 }/*# sourceMappingURL=gameWorld.css.map */
